@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"
+	default-autowire="constructor"
+	default-autowire-candidates="fileWriter,consoleWriter">
+	
+	<!-- default-autowire-candidates="*properties" wild card usage -->
+
+	<bean id="fileWriter" name="fileWriter"
+		class="example.Spring.autowire.byType.MyFileWriter">
+	</bean>
+	<bean id="consoleWriter" name="consoleWriter"
+		class="example.Spring.autowire.byType.MyConsoleWriter">
+	</bean>
+	<bean id="myLogger" name="myLogger" class="example.Spring.autowire.byType.MyLogger"
+		autowire="constructor">
+	</bean>
+
+	<bean id="fileWriter2" name="fileWriters"
+		class="example.Spring.autowire.byType.MyFileWriter">
+	</bean>
+
+</beans>

@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- byName autowiring requires setters and getters of the properties of 
-		the class. The ids of the dependencies must match with private properties 
+		the class. The names of the dependencies must match with private properties 
 		of the bean for example, fileWriter bean must match with name 'fileWriter' 
 		in MyLogger.java -->
 

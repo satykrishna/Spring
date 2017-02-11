@@ -18,7 +18,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		applicationContext = new ClassPathXmlApplicationContext("autowiring-byName-beans.xml");
+		applicationContext = new ClassPathXmlApplicationContext("autowiring-byConstructor-beans.xml");
 
 		ClassPathXmlApplicationContext cpxmAC = (ClassPathXmlApplicationContext) applicationContext;
 

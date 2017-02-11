@@ -13,6 +13,8 @@
 		<config>src/main/resources/setMapProperties-beans.xml</config>
 		<config>src/main/resources/autowiring-bytype-beans.xml</config>
 		<config>src/main/resources/autowiring-byName-beans.xml</config>
+		<config>src/main/resources/autowiring-byConstructor-beans.xml</config>
+		<config>src/main/resources/default-autowiring.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

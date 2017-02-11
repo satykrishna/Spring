@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  autowire by constructor requires following
+
+      1. constructor
+      2. Note that autowiring by constructor goes by autowiring by type -->
+
+	<bean id="fileWriter" name="fileWriter"
+		class="example.Spring.autowire.byType.MyFileWriter">
+	</bean>
+	<bean id="consoleWriter" name="consoleWriter"
+		class="example.Spring.autowire.byType.MyConsoleWriter">
+	</bean>
+	<bean id="myLogger" name="myLogger" class="example.Spring.autowire.byType.MyLogger"
+		autowire="constructor">
+	</bean>
+
+</beans>

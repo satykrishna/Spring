@@ -18,7 +18,8 @@
 	
 	
 	<!--  creates the ambigious problem with below declaration -->
-	<!-- <bean id="myFileWriter2" name="myFileWriter2"
-		class="example.Spring.autowire.byType.MyFileWriter">
-	</bean> -->
+	<bean id="myFileWriter2" name="myFileWriter2"
+		class="example.Spring.autowire.byType.MyFileWriter"
+		autowire-candidate="false">
+	</bean>
 </beans>
