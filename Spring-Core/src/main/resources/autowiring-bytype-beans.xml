@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  byType autowiring requires setters and getters of the properties of the class without ambiguity -->
+
+	<bean id="myFileWriter" name="myFileWriter"
+		class="example.Spring.autowire.byType.MyFileWriter">
+	</bean>
+	<bean id="myConsoleWriter" name="myConsoleWriter"
+		class="example.Spring.autowire.byType.MyConsoleWriter">
+	</bean>
+	<bean id="myLogger" name="myLogger"
+		class="example.Spring.autowire.byType.MyLogger" autowire="byType">
+	</bean>
+	
+	
+	<!--  creates the ambigious problem with below declaration -->
+	<!-- <bean id="myFileWriter2" name="myFileWriter2"
+		class="example.Spring.autowire.byType.MyFileWriter">
+	</bean> -->
+</beans>

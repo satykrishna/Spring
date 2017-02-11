@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-destroy-method="defaultDestroy"
+	default-init-method="defaultInit"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+
+	<!-- This bean uses factory bean to create the instances of the person. 
+		PersonFactory is the factory that is being used, in that createPerson Method 
+		has been used to pass the constructor arguments. property address is not 
+		part of constructor argument -->
+	<!-- <bean id="satya" name="satya" class="example.Spring.core.Person" init-method="onCreate" 
+		destroy-method="onDestroy" scope="prototype" factory-bean="personFactory" 
+		factory-method="createPerson"> <constructor-arg type="int" value="1002" name="id"></constructor-arg> 
+		<constructor-arg type="String" value="Kondapalli Satyakrishna" name="name"> 
+		</constructor-arg> <property name="address" ref="satyaAddress"></property> 
+		</bean> -->
+	<!-- <bean id="satyaAddress" name="satyaAddress" class="example.Spring.core.Address"> 
+		<property name="street" value="Deerfield Point"></property> <property name="zipCode" 
+		value="30004"></property> </bean> -->
+
+	<!-- <bean id="personFactory" name="personFactory" class="example.Spring.core.PersonFactory"> 
+		</bean> -->
+
+	<!-- dependency injection example -->
+	<!-- by default the beans created are singleton, if person1, person2 are 
+		created from this bean then both instances point to the same address if the 
+		type is prototype, every time we request a bean from container, it creates 
+		a new object and thus person1 and person2 point to different addresses 1. 
+		This also uses factory method to create the bean. -->
+	<!-- <bean id="satya" name="satya" class="example.Spring.core.Person" init-method="onCreate" 
+		destroy-method="onDestroy" scope="singleton" factory-method="getInstanceUsingFactoryMethod"> 
+		<constructor-arg type="int" value="1002" name="id"></constructor-arg> <constructor-arg 
+		type="String" value="Kondapalli Satyakrishna" name="name"> </constructor-arg> 
+		<property name="address" ref="satyaAddress"></property> </bean> -->
+	<!-- <bean id="satyaAddress" name="satyaAddress" class="example.Spring.core.Address"> 
+		<property name="street" value="Deerfield Point"></property> <property name="zipCode" 
+		value="30004"></property> </bean> -->
+	<!-- <bean id="satya2" name="satya2" class="example.Spring.core.Person" 
+		init-method="onCreate" destroy-method="onDestroy" scope="prototype" factory-method="getInstanceUsingFactoryMethod"> 
+		<constructor-arg type="int" value="1002" name="id"></constructor-arg> <constructor-arg 
+		type="String" value="Kondapalli Satyakrishna" name="name"> </constructor-arg> 
+		<property name="address" ref="satyaAddress"></property> </bean> -->
+
+
+   <!--  use pname space to set properties of the bean -->
+<!-- 	<bean id="addressUsingPNameSpace" name="address"
+		class="example.Spring.core.Address" p:street="Deerfield pt" p:zipCode="30004">
+	</bean>
+	<bean id="satyaUsingPNameSpace" name="satya" class="example.Spring.core.Person"
+		p:address-ref="addressUsingPNameSpace" p:id="1003"
+		p:name="Kondapalli Satyakrishna.....!!!!" /> -->
+
+	<!-- set the list properties of the bean. the list is a primitive type list -->	
+	<!-- <bean id="fruitlist" name="fruitList"
+		class="example.Spring.setListProperty.FruitListBasket">
+		<property name="name" value="MyFruitBasket"></property>
+		<property name="fruits">
+		<list>
+			<value type="java.lang.String">apple</value>
+			<value type="java.lang.String">orange</value>
+			<value type="java.lang.String">bananna</value>
+			<value type="java.lang.String">strawberry</value>
+		</list>
+		</property>
+	</bean> -->
+</beans>
