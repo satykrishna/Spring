@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import example.Spring.autowire.byType.MyLogger;
+import example.Spring.autowire.annotation.MyLogger;
 import example.Spring.setListProperty.FruitListBasket;
 import example.Spring.setListProperty.JungleUsingList;
 import example.Spring.setMapProperty.JungleusingMap;
@@ -18,14 +18,15 @@ public class App {
 
 	public static void main(String[] args) {
 
-		applicationContext = new ClassPathXmlApplicationContext("autowiring-byConstructor-beans.xml");
+		applicationContext = new ClassPathXmlApplicationContext("autowiring- by-annotation.xml");
 
 		ClassPathXmlApplicationContext cpxmAC = (ClassPathXmlApplicationContext) applicationContext;
 
-		autoWiringbyType();
+		autoWiringbyAnnotation();
 		
 		cpxmAC.close();
 	}
+
 
 	public static void dependencyInjectionExample(ApplicationContext applicationContext) {
 		Person person = (Person) applicationContext.getBean("satya");
@@ -68,5 +69,11 @@ public class App {
 		MyLogger logger = (MyLogger)applicationContext.getBean("myLogger");
 		logger.writeToConsole("Write to Console");
 		logger.writeToFile("Write to File");
+	}
+	
+	private static void autoWiringbyAnnotation() {
+		example.Spring.autowire.annotation.MyLogger logger = (example.Spring.autowire.annotation.MyLogger)applicationContext.getBean("myLogger");
+		logger.writeToConsole("Writing to console");
+		logger.writeToFile("writing to file");
 	}
 }

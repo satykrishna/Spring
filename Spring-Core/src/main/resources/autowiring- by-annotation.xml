@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<bean id="fileWriter" name="fileWriter"
+		class="example.Spring.autowire.annotation.MyFileWriter">
+	</bean>
+	<bean id="consoleWriter" name="consoleWriter"
+		class="example.Spring.autowire.annotation.MyConsoleWriter">
+	</bean>
+	<bean id="myLogger" name="myLogger" class="example.Spring.autowire.annotation.MyLogger"/>
+ 
+ 
+    <!--  Tell spring that we are using annotations to configure beans -->
+	<context:annotation-config/>
+</beans>

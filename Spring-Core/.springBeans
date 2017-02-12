@@ -15,6 +15,9 @@
 		<config>src/main/resources/autowiring-byName-beans.xml</config>
 		<config>src/main/resources/autowiring-byConstructor-beans.xml</config>
 		<config>src/main/resources/default-autowiring.xml</config>
+		<config>src/main/resources/autowiring- by-annotation.xml</config>
+		<config>src/main/java/example/Spring/autowire/annotation/optional/autowiring-annotation-optional.xml</config>
+		<config>src/main/java/example/Spring/autowire/annotation/qualifiers/qualifier.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

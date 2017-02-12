@@ -100,7 +100,8 @@
 		<module>HelloSpring</module>
 		<module>SpringMVC</module>
     <module>Spring-Core</module>
-  </modules>
+    <module>Spring-Database</module>
+	</modules>
 
 
 </project>

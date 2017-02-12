@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<!-- #{} is the expression language #{7} -eq 7 #{7+23} -eq 30 #{'7+23'} 
+		-eq "7+23" -->
+	<bean id="robo" name="robo" class="example.Spring.autowire.spel.Robot">
+		<property name="id" value="#{randomText.text?.length()}"></property>
+		<property name="speech" value="#{'random text : ' +randomText.text}" />
+	</bean>
+
+	<bean id="randomText" name="randomText"
+		class="example.Spring.autowire.spel.RandomText">
+	</bean>
+</beans>
