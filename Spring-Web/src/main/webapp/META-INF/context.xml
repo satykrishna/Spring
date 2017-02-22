@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+
+	<Resource name="jdbc/oracle" auth="Container" type="javax.sql.DataSource"
+		driverClassName="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@localhost:9091:xe"
+		username="satya" password="satya" connectionProperties="SetBigStringTryClob=true"
+		accessToUnderlyingConnectionAllowed="true" maxTotal="60" maxIdle="20"
+		maxWaitMillis="10000" />
+</context>
