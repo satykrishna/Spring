@@ -1,0 +1,38 @@
+table {
+	width: 400px;
+	padding: 10px;
+	border: 1px solid blue;
+}
+
+input {
+	width: 250px;
+}
+
+textarea {
+	width: 250px;
+	height: 300px;
+}
+
+.label {
+	text-align: right;
+	vertical-align: top;
+}
+
+.control {
+	margin-left: 10px;
+}
+
+.error {
+	font-size: small;
+	font-style: italic;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.loginError {
+	color: red;
+}
+
+.valid {
+	color: green;
+}

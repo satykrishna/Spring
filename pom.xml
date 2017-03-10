@@ -18,7 +18,12 @@
 				<artifactId>hibernate-validator</artifactId>
 				<version>5.0.1.Final</version>
 			</dependency>
-
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>2.0</version>
+				<scope>provided</scope>
+			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 			<dependency>
@@ -112,6 +117,26 @@
 				<artifactId>spring-aspects</artifactId>
 				<version>4.3.5.RELEASE</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>4.2.1.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>4.2.1.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>4.2.1.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-taglibs</artifactId>
+				<version>4.2.1.RELEASE</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -145,6 +170,7 @@
 		<module>Spring-Database</module>
 		<module>Spring-Web</module>
 		<module>Spring-Aop</module>
+		<module>Spring-Security</module>
 	</modules>
 
 

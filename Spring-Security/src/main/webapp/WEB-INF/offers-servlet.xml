@@ -18,7 +18,7 @@
 		which indicate that to spring that we are using annotations to configure 
 		our beans in the application -->
 	<!-- <context:annotation-config /> -->
-	<context:component-scan base-package="example.Spring.web.controller" />
+	<context:component-scan base-package="example.Spring.security.controller" />
 	
 	<!--  In OffersController.java, we have method showHome() method, this returns home String
 	The dispatcher servlet is using this internalResourceView resolver to locate home.jsp
@@ -29,6 +29,12 @@
 		<property name="prefix" value="/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	<mvc:resources location="/resources/" mapping="/resources/**">
-	</mvc:resources>
+	<!-- static resources -->
+	<mvc:resources location="/resources/" mapping="/resources/**"/>
+	<bean id="messageBean"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename"
+			value="example.Spring.security.messages.messages">
+		</property>
+	</bean>
 </beans>
